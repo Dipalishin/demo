@@ -14,4 +14,4 @@ console.log(document.url);
 console.log(document.head);
 console.log(document.body);
 console.log(document.doctype);
-
+console.log(document.ATTRIBUTE_NODE);

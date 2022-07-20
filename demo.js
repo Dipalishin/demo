@@ -1,39 +1,49 @@
-/*var items=document.getElementsByClassName('list-group-item');
+//travesing dom
+var item=document.querySelector('#items');
+console.log(item.parentElement.parentElement.parentElement);
+//console.log(item.childNodes);
+//console.log(item.children);
+console.log(item.firstElementChild);
+console.log(item.lastElementChild);
+console.log(item.firstChild);
+console.log(item.lastChild);
+var h2=document.querySelector('.title');
+console.log(h2.nextSibling);
+console.log(h2.nextElementSibling);
+console.log(h2.previousSibling);
+console.log(h2.parentElement);
 
-//items[3].style.backgroundColor='green';
+//create new element
+var newdiv=document.createElement('div');
+console.log(newdiv);
+newdiv.className='hello';
+newdiv.id='hello1';
+newdiv.setAttribute('title','Hello Div');
+var newdivtext=document.createTextNode('Hello World');
+newdiv.appendChild(newdivtext);
 
-for(var i=0;i<items.length;i++)
-{
-    items[i].style.fontWeight='bold';
-    items[i].style.backgroundColor='#f4f4f4';
-}
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
 
-//getelementbytagname
-/*var li=document.getElementsByTagName('li');
-for(var i=0;i<li.length;i++)
-{
-    li[i].style.backgroundColor='#f4f4f4';
-    li[i].style.fontWeight=' bold ';
-    li[i].style.color='green';
-}*/
-/*var header=document.getElementById("main-header");
-header.style.border='solid 3px #000';
-var titleItem=document.querySelector('.title');
-titleItem.style.color= 'red';
-titleItem.style.fontWeight='bold';*/
+console.log(newdiv);
+newdiv.style.fontSize='30px';
+newdiv.style.color='yellow';
+container.insertBefore(newdiv,h1);
 
-//queryselector
-/*var secondli=document.querySelector('.list-group-item:nth-child(2)');
-secondli.style.backgroundColor='green';
+var newdiv1=document.createElement('div');
+newdiv1.className='hello';
+newdiv1.setAttribute('title','hello');
+var newdivtext1=document.createTextNode('Hello World');
+newdiv1.appendChild(newdivtext1);
+var container1=document.querySelector('div #main');
+var h2=document.querySelector('div h2');
+console.log(newdiv1);
+newdiv1.style.fontSize='30px';
+newdiv1.style.color='pink';
 
-var thirdli=document.querySelector('.list-group-item:nth-child(3)');
-thirdli.style.display='none';*/
+container1.insertBefore(newdiv1,h2);
 
-//queryselectorAll
-var secondli1=document.querySelector('li:nth-child(2)');
-secondli1.style.color='#00FF00';
-var odd=document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++)
-{
-    odd[i].style.backgroundColor='#00FF00';
-}
+
+
+
+

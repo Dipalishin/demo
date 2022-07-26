@@ -68,5 +68,5 @@ function filterItems(e)
             item1.style.display='block';}
         else{item1.style.display='none';
     }
-    })
+    })  
 }
